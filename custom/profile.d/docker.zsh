@@ -6,7 +6,7 @@ alias dc=docker-compose
 MACHINE_ENV=~/.docker/.machine.sh
 
 function reset_env() {
-  cat <<-END > $MACHINE_ENV
+  cat <<-END >! $MACHINE_ENV
 unset DOCKER_API_VERSION
 unset DOCKER_HOST
 
