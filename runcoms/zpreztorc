@@ -129,7 +129,7 @@ zstyle ':prezto:module:editor' ps-context 'yes'
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 
-zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:module:prompt' theme 'custom'
 # zstyle ':prezto:module:prompt' theme 'powerline'
 
 # Set the working directory prompt display length.
