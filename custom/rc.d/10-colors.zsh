@@ -41,4 +41,4 @@ export CLICOLOR=1
 export LSCOLORS="Ex""Fx""cx""dx""bx""eg""ed""ab""ag""ac""ad"
 
 export GREP_COLOR='1;32'
-alias grep="`which grep` --color=auto"
+# alias grep="`which grep` --color=auto"
