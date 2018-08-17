@@ -10,7 +10,7 @@ if [ -d ~/.g ]; then
       echo
 
       cd $dir
-      _ruby_setup
+      chruby_auto
     fi
   }
 fi
