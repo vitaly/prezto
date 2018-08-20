@@ -132,9 +132,9 @@ zstyle ':prezto:module:editor' ps-context 'yes'
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 
-# zstyle ':prezto:module:prompt' theme 'custom'
+zstyle ':prezto:module:prompt' theme 'custom'
 # zstyle ':prezto:module:prompt' theme 'powerline'
-zstyle ':prezto:module:prompt' theme 'powerlevel9k'
+# zstyle ':prezto:module:prompt' theme 'powerlevel9k'
 
 # Set the working directory prompt display length.
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)
@@ -254,8 +254,10 @@ zstyle ':prezto:module:ssh:load' identities 'id_rsa'
 
 zstyle ':prezto:module:utility' safe-ops 'no'.
 
+export LDAP_USERNAME=vitaly.kushner
+
 POWERLEVEL9K_DIR_SHOW_WRITABLE=true
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh dir chruby pyenv docker_machine vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh dir )
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs chruby pyenv docker_machine vcs history time)
 DEFAULT_USER=$USER
