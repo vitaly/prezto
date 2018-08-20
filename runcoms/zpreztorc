@@ -39,12 +39,15 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'prompt' \
   'git' \
   'ruby' \
   'python' \
   'ssh' \
-  'docker'
+  'docker' \
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'autosuggestions' \
+  'prompt'
 
 zstyle ':prezto:load' zfunction 'zargs' 'zmv'
 
@@ -129,8 +132,9 @@ zstyle ':prezto:module:editor' ps-context 'yes'
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 
-zstyle ':prezto:module:prompt' theme 'custom'
+# zstyle ':prezto:module:prompt' theme 'custom'
 # zstyle ':prezto:module:prompt' theme 'powerline'
+zstyle ':prezto:module:prompt' theme 'powerlevel9k'
 
 # Set the working directory prompt display length.
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)
@@ -141,7 +145,7 @@ zstyle ':prezto:module:prompt' pwd-length 'long'
 
 # Set the prompt to display the return code along with an indicator for non-zero
 # return codes. This is not supported by all prompts.
-# zstyle ':prezto:module:prompt' show-return-val 'yes'
+zstyle ':prezto:module:prompt' show-return-val 'yes'
 
 #
 # Ruby
@@ -249,3 +253,9 @@ zstyle ':prezto:module:ssh:load' identities 'id_rsa'
 # zstyle ':prezto:module:utility' safe-ops 'yes'
 
 zstyle ':prezto:module:utility' safe-ops 'no'.
+
+POWERLEVEL9K_DIR_SHOW_WRITABLE=true
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh dir chruby pyenv docker_machine vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+DEFAULT_USER=$USER
