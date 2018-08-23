@@ -1,0 +1,23 @@
+#!/bin/bash -eu
+# move directory given as argument into it's "proper" place based on the git origin
+
+origin() (cd "$1"; git remote -v | grep origin | head -1 | cut -d$'\t' -f2 | cut -d\  -f1)
+
+format() {
+  sed -Ee "s,^((https?|ssh)://)?(git@)?,," -Ee 's,:[0-9]*/?,/,'
+}
+
+main() {
+  local src="$1"
+  local dst=$(origin "$src" | format)
+  dst="${dst%.git}"
+  local root=~/dev/src
+
+  echo "$src -> $root/$dst"
+  read
+
+  mkdir -p "$root/$(dirname "$dst")"
+  mv -v "$src" "$root/$dst"
+}
+
+main "$@"
