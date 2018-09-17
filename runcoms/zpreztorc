@@ -42,6 +42,7 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'ruby' \
   'python' \
+  'node' \
   'ssh' \
   'docker' \
   'syntax-highlighting' \
@@ -253,11 +254,3 @@ zstyle ':prezto:module:ssh:load' identities 'id_rsa'
 # zstyle ':prezto:module:utility' safe-ops 'yes'
 
 zstyle ':prezto:module:utility' safe-ops 'no'.
-
-export LDAP_USERNAME=vitaly.kushner
-
-POWERLEVEL9K_DIR_SHOW_WRITABLE=true
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh dir )
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs chruby pyenv docker_machine vcs history time)
-DEFAULT_USER=$USER
