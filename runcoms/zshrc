@@ -25,6 +25,3 @@ POWERLEVEL9K_DIR_SHOW_WRITABLE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh dir )
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs chruby pyenv docker_machine vcs history time)
 DEFAULT_USER=$USER
-
-alias dc=docker-compose
-alias cat="bat --theme TwoDark"

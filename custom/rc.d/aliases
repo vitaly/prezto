@@ -27,3 +27,6 @@ ku="/Applications/Kube-Solo.app/Contents/Resources/"
 alias k=kubectl
 
 alias cat="bat --theme TwoDark"
+
+alias dc=docker-compose
+alias ddr='docker run --rm -ti'
