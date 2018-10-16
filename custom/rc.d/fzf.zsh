@@ -7,10 +7,15 @@ fzf_cd_src() {
 
   local list() (
     cd $src
-    find . -type d -name .git -maxdepth 4 | xargs -n1 dirname | cut -d/ -f2-
+    find . -type d -name .git -maxdepth 5 | xargs -n1 dirname | cut -d/ -f2- | grep -v /_/
   )
 
-  local d=$(list | fzf_menu -q "${1:-}")
+  if [ "-u" = "$1" ]; then
+    list >! $src/.list
+    return
+  fi
+
+  local d=$(cat $src/.list | fzf_menu -q "${1:-}")
 
   [ -n "$d"  ] || return
 

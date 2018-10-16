@@ -24,4 +24,6 @@ alias e="emacsclient -a emacsnox -t"
 
 
 ku="/Applications/Kube-Solo.app/Contents/Resources/"
-k=kubectl
+alias k=kubectl
+
+alias cat="bat --theme TwoDark"
