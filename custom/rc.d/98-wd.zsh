@@ -1,5 +1,5 @@
 wd() {
-  . ~/dev/src/github.com/mfaerevaag/wd/wd/wd.sh
+  . ~/dev/src/github.com/mfaerevaag/wd/wd.sh
 }
 unalias g
 function g()
