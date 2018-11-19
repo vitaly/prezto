@@ -1,5 +1,5 @@
 function db_con_info() {
-  echo
+  echo ""
   echo "== POSTGRES CONNECTION:"
   echo "PGUSER=$PGUSER"
   echo "PGPASSWORD=$PGPASSWORD"
@@ -24,12 +24,12 @@ function db_parse() {
 
   read url
 
-  if echo $url | grep -q postgres://; then
-    url=`echo $url | cut -d/ -f3-`
+  if echo "$url" | grep -q postgres://; then
+    url=$(echo "$url" | cut -d/ -f3-)
   fi
 
-  echo DATABASE URL: $url
-  echo
+  echo "DATABASE URL: $url"
+  echo ""
 
   if echo $url | grep -q @; then
     user=`echo $url | cut -d@ -f1 | cut -d: -f 1`

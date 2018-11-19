@@ -1,8 +1,3 @@
-path=(
-  ~/my/dev/docker/lego/bin
-  $path
-)
-
 source ~/dev/docker/dm/dm.sh
 
 BASE16_SHELL=$HOME/dev/src/github.com/chriskempson/base16-shell
