@@ -24,7 +24,7 @@ kaws() {
       export AWS_DEFAULT_REGION=eu-west-1
       ;;
     us)
-      echo switching to EU
+      echo switching to US
       export AWS_DEFAULT_REGION=us-east-1
       ;;
     *)
