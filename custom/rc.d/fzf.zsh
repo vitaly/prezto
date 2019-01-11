@@ -25,6 +25,7 @@ fzf_cd_src() {
 
   cd "$d"
 }
+alias G=fzf_cd_src
 
 fzf_base16() {
   local theme=$(alias |  grep '^base16_[-a-zA-Z0-9_-]\+=' | cut -d= -f1 | cut -d_ -f2- | fzf_menu --cycle -q "${1:-}")
@@ -34,5 +35,4 @@ fzf_base16() {
   fi
 }
 
-alias G=fzf_cd_src
 alias B=fzf_base16
