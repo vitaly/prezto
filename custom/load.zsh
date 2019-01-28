@@ -1,4 +1,5 @@
 setopt CLOBBER
+export SHELL=$(which zsh)
 
 while read f; do
   source $f
