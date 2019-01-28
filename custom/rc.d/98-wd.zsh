@@ -1,8 +1,10 @@
 unalias g
 
-if [ -e ~/dev/src/github.com/mfaerevaag/wd/wd.sh ]; then
+BASE16_SHELL=$HOME/.zsh/vendor/wd
+
+if [ -e ~/.zsh/vendor/wd/wd.sh ]; then
   wd() {
-    . ~/dev/src/github.com/mfaerevaag/wd/wd.sh
+    . ~/.zsh/vendor/wd/wd.sh
   }
 
   g()

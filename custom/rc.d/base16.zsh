@@ -1,4 +1,4 @@
-BASE16_SHELL=$HOME/dev/src/github.com/chriskempson/base16-shell
+BASE16_SHELL=$HOME/.zsh/vendor/base16-shell
 \
   [ -d "${BASE16_SHELL}" ] && \
   [ -n "$PS1" ] && \
