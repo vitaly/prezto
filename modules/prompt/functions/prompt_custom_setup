@@ -170,7 +170,7 @@ function prompt_sorin_setup {
   _prompt_sorin_pwd=''
 
   # Define prompts.
-  PROMPT='${ZSH_PROMPT_HOST:+"%F{9}%n%f%F{7}@%f%F{3}%m%f "}%F{4}${_prompt_sorin_pwd}%(!. %B%F{1}#%f%b.)${editor_info[keymap]} '
+  PROMPT='${ZSH_PROMPT_PREFIX}${SSH_TTY:+"%F{9}%n%f%F{7}@%f%F{3}%m%f "}%F{4}${_prompt_sorin_pwd}%(!. %B%F{1}#%f%b.)${editor_info[keymap]} '
   RPROMPT='${DOCKER_MACHINE_NAME:+"%F{1}@$DOCKER_MACHINE_NAME%f "}'
   RPROMPT+='${ruby_info[version]:s/ruby-//}'
   RPROMPT+='$python_info[virtualenv]${editor_info[overwrite]}%(?:: %F{1}'
