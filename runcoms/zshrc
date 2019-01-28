@@ -15,13 +15,3 @@ MYZSH="${HOME}/.zprezto"
 source "${MYZSH}/custom/load.zsh"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-setopt CLOBBER
-
-
-export LDAP_USERNAME=vitaly.kushner
-
-POWERLEVEL9K_DIR_SHOW_WRITABLE=true
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh dir )
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs chruby pyenv docker_machine vcs history time)
-DEFAULT_USER=$USER

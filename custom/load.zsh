@@ -1,3 +1,5 @@
+setopt CLOBBER
+
 while read f; do
   source $f
 done < <(\ls ~/.zsh/custom/profile.d/*.zsh)
