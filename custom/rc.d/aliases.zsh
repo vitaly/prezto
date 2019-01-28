@@ -1,8 +1,9 @@
 alias ddr="docker run -it --rm"
 alias dc=docker-compose
 
-
-alias cat="bat --theme TwoDark"
+if command -v bar > /dev/null; then
+  alias cat="bat --theme TwoDark"
+fi
 
 alias aria='aria2c -s 10 -x 10 -k 1M'
 
