@@ -5,3 +5,9 @@ source "${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshrc"
 source "${ZDOTDIR:-$HOME}/.zprezto/custom/load.zsh"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+
+# ruby for prompt
+zstyle ':prezto:module:ruby:info:version' format '%F{blue}[%v]%f '
+zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
+

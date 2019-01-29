@@ -103,11 +103,6 @@ function prompt_sorin_precmd {
     python-info
   fi
 
-  # Get Ruby version information.
-  if (( $+functions[ruby-info] )); then
-    ruby-info
-  fi
-
   prompt_sorin_async_tasks
 }
 
@@ -158,11 +153,6 @@ function prompt_sorin_setup {
   # Set python-info format
   zstyle ':prezto:module:python:info:virtualenv' format '%f%F{3}(%v)%F{7} '
 
-
-  # set ruby
-  zstyle ':prezto:module:ruby:info:version' format '%F{blue}[%v]%f '
-  zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
-
   # Get the async worker set up
   _sorin_cur_git_root=''
 
@@ -171,9 +161,7 @@ function prompt_sorin_setup {
 
   # Define prompts.
   PROMPT='${SSH_TTY:+"%F{9}%n%f%F{7}@%f%F{3}%m%f "}%F{4}${_prompt_sorin_pwd}%(!. %B%F{1}#%f%b.)${editor_info[keymap]} '
-  RPROMPT='${DOCKER_MACHINE_NAME:+"%F{1}@$DOCKER_MACHINE_NAME%f "}'
-  RPROMPT+='$ruby_info[version]'
-  RPROMPT+='$python_info[virtualenv]${editor_info[overwrite]}%(?:: %F{1}'
+  RPROMPT='$python_info[virtualenv]${editor_info[overwrite]}%(?:: %F{1}'
   RPROMPT+=${show_return}
   RPROMPT+='%f)${VIM:+" %B%F{6}V%f%b"}${_prompt_sorin_git}'
   SPROMPT='zsh: correct %F{1}%R%f to %F{2}%r%f [nyae]? '
@@ -189,5 +177,3 @@ function prompt_sorin_preview {
 }
 
 prompt_sorin_setup "$@"
-
-# vim: ft=zsh

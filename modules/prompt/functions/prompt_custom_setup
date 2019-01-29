@@ -158,11 +158,6 @@ function prompt_sorin_setup {
   # Set python-info format
   zstyle ':prezto:module:python:info:virtualenv' format '%f%F{3}(%v)%F{7} '
 
-
-  # set ruby
-  zstyle ':prezto:module:ruby:info:version' format '%F{blue}[%v]%f '
-  zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
-
   # Get the async worker set up
   _sorin_cur_git_root=''
 
