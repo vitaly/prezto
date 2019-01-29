@@ -1,5 +1,3 @@
-unalias g
-
 BASE16_SHELL=$HOME/.zsh/vendor/wd
 
 if [ -e ~/.zsh/vendor/wd/wd.sh ]; then

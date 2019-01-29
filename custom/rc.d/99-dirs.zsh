@@ -19,7 +19,6 @@
 function mm() { pwd >! ~/.last_dir }
 function chpwd { mm }
 
-unalias gg
 # change to the last directory
 function gg() {
   if [ -e ~/.last_dir  ]; then
