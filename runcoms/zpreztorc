@@ -12,10 +12,6 @@
 # Set case-sensitivity for completion, history lookup, etc.
 # zstyle ':prezto:*:*' case-sensitive 'yes'
 
-
-zstyle ':prezto:*:*' case-sensitive 'yes'
-
-
 # Color output (auto set to 'no' on dumb terminals).
 zstyle ':prezto:*:*' color 'yes'
 
@@ -32,23 +28,14 @@ zstyle ':prezto:*:*' color 'yes'
 # The order matters.
 zstyle ':prezto:load' pmodule \
   'environment' \
+  'terminal' \
   'editor' \
   'history' \
   'directory' \
   'spectrum' \
+  'utility' \
   'completion' \
-  'git' \
-  'ruby' \
-  'python' \
-  'node' \
-  'ssh' \
-  'docker' \
-  'syntax-highlighting' \
-  'history-substring-search' \
-  'autosuggestions' \
   'prompt'
-
-zstyle ':prezto:load' zfunction 'zargs' 'zmv'
 
 #
 # Autosuggestions
@@ -70,17 +57,13 @@ zstyle ':prezto:load' zfunction 'zargs' 'zmv'
 #
 
 # Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':prezto:module:editor' key-bindings 'vi'
+zstyle ':prezto:module:editor' key-bindings 'emacs'
 
 # Auto convert .... to ../..
 # zstyle ':prezto:module:editor' dot-expansion 'yes'
 
-zstyle ':prezto:module:editor' dot-expansion 'yes'
-
 # Allow the zsh prompt context to be shown.
 #zstyle ':prezto:module:editor' ps-context 'yes'
-
-zstyle ':prezto:module:editor' ps-context 'yes'
 
 #
 # Git
@@ -88,8 +71,6 @@ zstyle ':prezto:module:editor' ps-context 'yes'
 
 # Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
 # zstyle ':prezto:module:git:status:ignore' submodules 'all'
-
-zstyle ':prezto:module:git:alias' skip 'yes'
 
 #
 # GNU Utility
@@ -132,21 +113,16 @@ zstyle ':prezto:module:git:alias' skip 'yes'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-
-zstyle ':prezto:module:prompt' theme 'custom'
-# zstyle ':prezto:module:prompt' theme 'powerline'
-# zstyle ':prezto:module:prompt' theme 'powerlevel9k'
+zstyle ':prezto:module:prompt' theme 'sorin'
 
 # Set the working directory prompt display length.
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)
 # for longer or 'full' (with '~' expansion) for even longer prompt display.
 # zstyle ':prezto:module:prompt' pwd-length 'short'
 
-zstyle ':prezto:module:prompt' pwd-length 'long'
-
 # Set the prompt to display the return code along with an indicator for non-zero
 # return codes. This is not supported by all prompts.
-zstyle ':prezto:module:prompt' show-return-val 'yes'
+# zstyle ':prezto:module:prompt' show-return-val 'yes'
 
 #
 # Ruby
@@ -155,16 +131,12 @@ zstyle ':prezto:module:prompt' show-return-val 'yes'
 # Auto switch the Ruby version on directory change.
 # zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
 
-zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
-
 #
 # Python
 #
 
 # Auto switch the Python virtualenv on directory change.
 # zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
-
-zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
 
 # Automatically initialize virtualenvwrapper if pre-requisites are met.
 # zstyle ':prezto:module:python:virtualenv' initialize 'yes'
@@ -185,8 +157,6 @@ zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
 
 # Set the SSH identities to load into the agent.
 # zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
-
-zstyle ':prezto:module:ssh:load' identities 'id_rsa'
 
 #
 # Syntax Highlighting
@@ -212,14 +182,7 @@ zstyle ':prezto:module:ssh:load' identities 'id_rsa'
 # zstyle ':prezto:module:syntax-highlighting' pattern \
 #   'rm*-rf*' 'fg=white,bold,bg=red'
 
-
-zstyle ':prezto:module:syntax-highlighting' highlighters \
-  'main' \
-  'brackets' \
-  'pattern' \
-  'line' \
-  'cursor'
-
+#
 # Terminal
 #
 
@@ -259,5 +222,3 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 # before deleting or overwriting files. Set to 'no' to disable this safer
 # behavior.
 # zstyle ':prezto:module:utility' safe-ops 'yes'
-
-zstyle ':prezto:module:utility' safe-ops 'no'.
