@@ -1,6 +1,0 @@
-# vim: ft=zsh
-
-#alias e=exercism
-#alias :e=vim
-alias :e="emacs -nw"
-alias e="emacsclient -a emacsnox -t"
